@@ -9,6 +9,7 @@ import {
   Paper,
   Switch,
   FormControlLabel,
+  Stack,
 } from '@mui/material';
 import {
   WaterDrop as WaterDropIcon,
@@ -17,6 +18,7 @@ import {
   Alarm as AlarmIcon,
 } from '@mui/icons-material';
 import CupangMap from './CupangMap';
+import Logo from './Logo';
 
 function Dashboard() {
   const { currentUser } = useAuth();
@@ -48,6 +50,20 @@ function Dashboard() {
                 borderRadius: 2,
               }}
             >
+              <Box sx={{ 
+                width: 120, 
+                height: 120, 
+                p: 2,
+                mb: 4,
+                bgcolor: 'white',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+              }}>
+                <Logo />
+              </Box>
               <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold' }}>
                 Welcome to Cupang Proper Water Level Monitoring System
               </Typography>
